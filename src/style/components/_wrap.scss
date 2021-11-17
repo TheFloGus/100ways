@@ -1,0 +1,21 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.wrap{
+	max-width: 100%;
+	min-height: 100vh;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.main__pages{
+	min-height: 100vh;
+}
