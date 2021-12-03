@@ -205,7 +205,7 @@ function Home() {
 						<p>Елизавета Буглак</p>
 					  </div>
 					  <div className="student__description">
-						<p>Занимался созданием сайта и всеми остальными техническими вопросами</p>
+						<p>Занималась выбором напралвения и разработкой тура</p>
 					  </div>
 				  </div>
 				  <div className="student__block" data-aos="flip-up" data-aos-delay="250" style={{transitionProperty: 'all'}}>
@@ -216,7 +216,7 @@ function Home() {
 						<p>Полина Евмененко</p>
 					  </div>
 					  <div className="student__description">
-						<p>Занимался созданием сайта и всеми остальными техническими вопросами</p>
+						<p>Занималась поиском отелей и достопримечательностей тура</p>
 					  </div>
 				  </div>
 			  </div>

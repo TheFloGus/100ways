@@ -29,6 +29,9 @@ function Header() {
         <div className="container">
           <div className={small ? "header--small show" : "header--small"}>
             <div className="nav__links--small">
+			<Link to="/home" className="nav__link--small">
+                <div className="nav__button--small">Домой</div>
+              </Link>
               <Link to="/hotels" className="nav__link--small">
                 <div className="nav__button--small">Отели</div>
               </Link>
