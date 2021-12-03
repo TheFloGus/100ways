@@ -1,11 +1,32 @@
-import React from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import logo from "../images/full_logo.png";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { debounce } from "../utilities/helper";
+const Home = React.lazy(() => import("./Home"));
 
 function Header() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = debounce(() => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(
+      (prevScrollPos > currentScrollPos &&
+        prevScrollPos - currentScrollPos > 80) ||
+        currentScrollPos < 150
+    );
+    setPrevScrollPos(currentScrollPos);
+  }, 10);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
+
   return (
     <>
-      <div className="header__wrap">
+      <div className="header__wrap" style={{ top: visible ? "0" : "-230px" }}>
         <div className="container">
           <div className="header">
             <Link to="/home" className="nav__link">
@@ -53,7 +74,14 @@ function Header() {
       <div className="main__pages">
         <Routes>
           <Route exact path="/" element={<Navigate to="/home" />} />
-          {/* <Route path="/home" element={<Navigate to="/home" />} /> */}
+          <Route
+            path="/home"
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <Home />
+              </Suspense>
+            }
+          />
           <Route path="/hotels" element={<Navigate to="/home" />} />
           <Route path="/meals" element={<Navigate to="/home" />} />
           <Route path="/transportation" element={<Navigate to="/home" />} />
