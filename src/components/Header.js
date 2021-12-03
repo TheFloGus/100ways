@@ -1,5 +1,6 @@
 import React, { Suspense, useState, useEffect } from "react";
-import logo from "../images/full_logo.png";
+import logo from "../images/logo.png";
+import name from "../images/name.png";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 import { debounce } from "../utilities/helper";
 const Home = React.lazy(() => import("./Home"));
@@ -12,8 +13,8 @@ function Header() {
     const currentScrollPos = window.pageYOffset;
     setVisible(
       (prevScrollPos > currentScrollPos &&
-        prevScrollPos - currentScrollPos > 80) ||
-        currentScrollPos < 150
+        prevScrollPos - currentScrollPos > 200) ||
+        currentScrollPos < 100
     );
     setPrevScrollPos(currentScrollPos);
   }, 10);
@@ -31,6 +32,7 @@ function Header() {
           <div className="header">
             <Link to="/home" className="nav__link">
               <img className="logo" src={logo} alt="100ways logo"></img>
+			  <img className="logo--name" src={name} alt="100ways name in logo"></img>
             </Link>
             <div className="nav__links">
               <div className="nav__buttons--group">

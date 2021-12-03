@@ -6,6 +6,7 @@
 	background-color: #bf85fe;
 	padding: 10px;
 	transition: all 0.1s linear;
+	z-index: 5;
 }
 
 .header{
@@ -15,7 +16,11 @@
 }
 
 .logo {
-	width: 50px;
+	width: 100px;
+}
+
+.logo--name{
+	width: 100px;
 }
 
 .nav__links {
