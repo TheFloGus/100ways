@@ -8,18 +8,13 @@ const Home = React.lazy(() => import("./Home"));
 const Hotels = React.lazy(() => import("./Hotels"));
 
 function Header() {
-  //   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
   const [small, setSmall] = useState(false);
 
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
     setSmall(
-      //   (prevScrollPos > currentScrollPos &&
-      //     prevScrollPos - currentScrollPos > 200) ||
       currentScrollPos > 10
     );
-    // setPrevScrollPos(currentScrollPos);
   }, 100);
 
   useEffect(() => {
@@ -168,7 +163,7 @@ function Header() {
       </div>
       <div className="footer__wrap">
         <div className="container">
-          <div className="footer">My name</div>
+          <div className="footer">Brednev Eugene 2021</div>
         </div>
       </div>
     </>

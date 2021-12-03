@@ -128,6 +128,7 @@ function Home() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49452.31292426266!2d9.09335850330501!3d39.22539910731367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e73415b68e1ca3%3A0x201e1506cf816eb1!2sCagliari%2C%20Metropolitan%20City%20of%20Cagliari%2C%20Italy!5e0!3m2!1sen!2sby!4v1638539497503!5m2!1sen!2sby"
                 width="550"
                 height="390"
+				title="Map of Cagliari"
               ></iframe>
             </div>
             <div className="geo-text">
@@ -187,7 +188,7 @@ function Home() {
 			  <div className="student__blocks">
 				  <div className="student__block" data-aos="flip-up" style={{transitionProperty: 'all'}}>
 					  <div className="student__avatar">
-						<img src={eugene} width='100px' height='100px'></img>
+						<img src={eugene} width='100px' height='100px' alt='Eugene Brednev avatar'/>
 					  </div>
 					  <div className="student__name">
 						<p>Евгений Бреднев</p>
@@ -198,7 +199,7 @@ function Home() {
 				  </div>
 				  <div className="student__block" data-aos="flip-up" data-aos-delay="150" style={{transitionProperty: 'all'}}>
 				  <div className="student__avatar">
-						<img src={liza} width='100px' height='100px'></img>
+						<img src={liza} width='100px' height='100px' alt='Liza Buglak avatar'/>
 					  </div>
 					  <div className="student__name">
 						<p>Елизавета Буглак</p>
@@ -209,7 +210,7 @@ function Home() {
 				  </div>
 				  <div className="student__block" data-aos="flip-up" data-aos-delay="250" style={{transitionProperty: 'all'}}>
 					  <div className="student__avatar">
-						<img src={polina} width='100px' height='100px'></img>
+						<img src={polina} width='100px' height='100px' alt='Polina Evmenenko avatar'/>
 					  </div>
 					  <div className="student__name">
 						<p>Полина Евмененко</p>
