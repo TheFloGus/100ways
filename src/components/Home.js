@@ -6,9 +6,15 @@ import cagliari2 from "../images/Cagliari2.jpg";
 import cagliari3 from "../images/Cagliari3.jpg";
 import flag from "../images/flag.svg";
 import crest from "../images/crest.png";
+import polina from "../images/polina-avatar.jpg"
+import liza from "../images/liza-avatar.jpg"
+import eugene from "../images/eugene-avatar.jpg"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
   let history = useNavigate();
+  AOS.init()
 
   const carouselRef = React.useRef(null);
   const onNextStart = (currentItem, nextItem) => {
@@ -72,13 +78,13 @@ function Home() {
               >
                 <div className="slide--glass">
                   <h3>Отзывы</h3>
-                  <p>Не верите нам? Спросите у людей!</p>
+                  <p>Не верите нам? Спросите у нащих клиентов!</p>
                 </div>
               </div>
             </Carousel>
           </div>
-          <div className="main-info">
-            <div className="main-text">
+          <div className="main-info" data-aos="fade-up">
+            <div className="main-text" >
               <h1 className="main-text--header">Кальяри</h1>
               <p>
                 Кальяри — не только столица Сардинии, но и один из самых крупных
@@ -109,19 +115,19 @@ function Home() {
               </p>
             </div>
             <div className="main-images">
-              <img src={cagliari1} className="main-image" height="200px"></img>
-              <img src={cagliari2} className="main-image" height="200px"></img>
-              <img src={cagliari3} className="main-image" width="417px"></img>
+              <img src={cagliari1} alt="Красоты Кальяри" className="main-image" height="300px"></img>
+              <img src={cagliari2} alt="Красоты Кальяри" className="main-image" height="300px"></img>
+              <img src={cagliari3} alt="Красоты Кальяри" className="main-image" width="606px"></img>
             </div>
           </div>
-          <div className="geo-info">
+          <div className="geo-info" data-aos="fade-up">
             <div className="geo-map">
-			  <img src={flag} className="main-image" height="200px"></img>
-			  <img src={crest} className="main-image" height="200px"></img>
-			  <iframe
+              <img src={flag} className="main-image" height="200px" alt="Флаг Кальяри"></img>
+              <img src={crest} className="main-image" height="200px" alt="Герб Кальяри"></img>
+              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49452.31292426266!2d9.09335850330501!3d39.22539910731367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e73415b68e1ca3%3A0x201e1506cf816eb1!2sCagliari%2C%20Metropolitan%20City%20of%20Cagliari%2C%20Italy!5e0!3m2!1sen!2sby!4v1638539497503!5m2!1sen!2sby"
                 width="550"
-                height="350"
+                height="390"
               ></iframe>
             </div>
             <div className="geo-text">
@@ -149,13 +155,6 @@ function Home() {
               </p>
               <br />
               <p>
-                Характерные особенности климата Кальяри — мягкая влажная зима и
-                жаркое сухое лето. Морские бризы смягчают летнюю жару, поэтому
-                здесь практически всегда дышится легко. Температура воздуха в
-                Кальяри никогда не опускается ниже 0°С.
-              </p>
-			  <br />
-              <p>
                 Современный свой облик город приобрел в конце XIX — в середине
                 XX в. В это время в рамках движения piccone risanatore
                 («исцеляющая кирка») многие старинные города Сардинии, в том
@@ -164,8 +163,63 @@ function Home() {
                 Автономного округа Сардиния, который входит в состав Итальянской
                 республики.{" "}
               </p>
+              <br />
+              <p>
+                Характерные особенности климата Кальяри — мягкая влажная зима и
+                жаркое сухое лето. Морские бризы смягчают летнюю жару, поэтому
+                здесь практически всегда дышится легко. Температура воздуха в
+                Кальяри никогда не опускается ниже 0°С.
+              </p>
+              <br />
+              <p>
+                Животный мир Кальяри представлен белками, ласками, горностаями,
+                хорьками, дикими кошками, тритонами и саламандрами. Изредка
+                встречаются лани, рыси, лисы и волки. Самой же известной
+                достопримечательностью местной фауны являются невероятно
+                красивые, грациозные розовые фламинго. Есть в Кальяри и
+                живность, встречи с которой могут доставить немало хлопот, —
+                гадюки.
+              </p>
             </div>
           </div>
+		  <div className="students">
+			  <h2 style={{fontSize: '40px'}}>Над проектом трудились</h2>
+			  <div className="student__blocks">
+				  <div className="student__block" data-aos="flip-up" style={{transitionProperty: 'all'}}>
+					  <div className="student__avatar">
+						<img src={eugene} width='100px' height='100px'></img>
+					  </div>
+					  <div className="student__name">
+						<p>Евгений Бреднев</p>
+					  </div>
+					  <div className="student__description">
+						<p>Занимался созданием сайта и всеми остальными техническими вопросами</p>
+					  </div>
+				  </div>
+				  <div className="student__block" data-aos="flip-up" data-aos-delay="150" style={{transitionProperty: 'all'}}>
+				  <div className="student__avatar">
+						<img src={liza} width='100px' height='100px'></img>
+					  </div>
+					  <div className="student__name">
+						<p>Елизавета Буглак</p>
+					  </div>
+					  <div className="student__description">
+						<p>Занимался созданием сайта и всеми остальными техническими вопросами</p>
+					  </div>
+				  </div>
+				  <div className="student__block" data-aos="flip-up" data-aos-delay="250" style={{transitionProperty: 'all'}}>
+					  <div className="student__avatar">
+						<img src={polina} width='100px' height='100px'></img>
+					  </div>
+					  <div className="student__name">
+						<p>Полина Евмененко</p>
+					  </div>
+					  <div className="student__description">
+						<p>Занимался созданием сайта и всеми остальными техническими вопросами</p>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
         </div>
       </div>
     </div>

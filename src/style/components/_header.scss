@@ -1,60 +1,107 @@
 .header__wrap {
-	position: sticky;
-	top: 0;
-	width: 100%;
-	// height: 200px;
-	background-color: #bf85fe;
-	padding: 10px;
-	transition: all 0.1s linear;
-	z-index: 5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // height: 200px;
+  background-color: #bf85fe;
+  padding: 10px;
+  transition: all 0.1s linear;
+  z-index: 5;
 }
 
-.header{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.1s linear;
+
+}
+
+.header.show{
+	height: 145px;
+}
+
+.header--small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s linear;
+  height: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header--small.show{
+	height: 45px;
 }
 
 .logo {
-	width: 100px;
+  width: 100px;
 }
 
-.logo--name{
-	width: 100px;
+.logo--name {
+  width: 100px;
 }
 
 .nav__links {
-	font-size: 16px;
-	display: flex;
-	flex-direction: column;
-	text-decoration: none;
-	margin-left: 50px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: space-between;
+  margin-left: 50px;
 }
 
-.nav__button{
-	display: flex;
-	padding: 10px;
-	width: 170px;
-	height: 30px;
-	border: 3px solid #fff;
-	border-radius: 7px;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.15s linear;
+.nav__links--small {
+  font-size: 10px;
+  display: flex;
 }
 
-.nav__link{
-	text-decoration: none;
-	font-weight: 500;
-	color: #fff;
-	margin: 10px;
+.nav__button {
+  display: flex;
+  padding: 10px;
+  width: 170px;
+  height: 30px;
+  border: 3px solid #fff;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s linear;
 }
 
-.nav__button:hover{
-	background-color: #fff;
-	color: #bf85fe;
+.nav__button--small {
+  display: flex;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  border: 3px solid #fff;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s linear;
 }
 
-.nav__buttons--group{
-	display: flex;
+.nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px;
+}
+
+.nav__link--small {
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+  margin: 10px;
+}
+
+.nav__button:hover {
+  background-color: #fff;
+  color: #bf85fe;
+}
+
+.nav__buttons--group {
+  display: flex;
 }

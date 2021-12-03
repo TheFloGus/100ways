@@ -57,7 +57,7 @@
 
 .main-text{
 	width: 80%;
-	font-size: 15px;
+	font-size: 16px;
 	margin-right: 100px; 
 	text-align: justify;
 }
@@ -82,4 +82,46 @@
 
 .geo-text--title{
 	margin-bottom: 15px;
+}
+
+.students{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.student__blocks{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 50px;
+}
+
+.student__block{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 300px;
+	border: 3px solid #bf85fe;
+	border-radius: 7px;
+	padding: 20px;
+	margin: 0 15px;
+}
+
+.student__block:hover{
+	background-color: #bf85fe;
+	color: #fff;
+}
+
+.student__avatar{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.student__name{
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0 20px 0;
 }

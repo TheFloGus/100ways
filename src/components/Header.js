@@ -3,36 +3,77 @@ import logo from "../images/logo.png";
 import name from "../images/name.png";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 import { debounce } from "../utilities/helper";
+import { SpinnerRoundFilled } from "spinners-react";
 const Home = React.lazy(() => import("./Home"));
+const Hotels = React.lazy(() => import("./Hotels"));
 
 function Header() {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  //   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [small, setSmall] = useState(false);
 
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
-    setVisible(
-      (prevScrollPos > currentScrollPos &&
-        prevScrollPos - currentScrollPos > 200) ||
-        currentScrollPos < 100
+    setSmall(
+      //   (prevScrollPos > currentScrollPos &&
+      //     prevScrollPos - currentScrollPos > 200) ||
+      currentScrollPos > 10
     );
-    setPrevScrollPos(currentScrollPos);
-  }, 10);
+    // setPrevScrollPos(currentScrollPos);
+  }, 100);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, visible, handleScroll]);
+  }, [handleScroll]);
 
   return (
     <>
-      <div className="header__wrap" style={{ top: visible ? "0" : "-230px" }}>
+      <div className="header__wrap">
         <div className="container">
-          <div className="header">
+          <div className={small ? "header--small show" : "header--small"}>
+            <div className="nav__links--small">
+              <Link to="/hotels" className="nav__link--small">
+                <div className="nav__button--small">Отели</div>
+              </Link>
+              <Link to="/meals" className="nav__link--small">
+                <div className="nav__button--small">Питание</div>
+              </Link>
+              <Link to="/transportation" className="nav__link--small">
+                <div className="nav__button--small">Транспорт</div>
+              </Link>
+              <Link to="/landmarks" className="nav__link--small">
+                <div className="nav__button--small">Что посмотреть</div>
+              </Link>
+              <Link to="/tour" className="nav__link--small">
+                <div className="nav__button--small">Тур</div>
+              </Link>
+              <Link to="/ticket" className="nav__link--small">
+                <div className="nav__button--small">Путевка</div>
+              </Link>
+              <Link to="/checking" className="nav__link--small">
+                <div className="nav__button--small">Заселение</div>
+              </Link>
+              <Link to="/technologies" className="nav__link--small">
+                <div className="nav__button--small">Технологии</div>
+              </Link>
+              <Link to="/about" className="nav__link--small">
+                <div className="nav__button--small">О Фирме</div>
+              </Link>
+              <Link to="/reviews" className="nav__link--small">
+                <div className="nav__button--small">Отзывы</div>
+              </Link>
+            </div>
+          </div>
+          <div className={small ? "header" : "header show"}>
             <Link to="/home" className="nav__link">
               <img className="logo" src={logo} alt="100ways logo"></img>
-			  <img className="logo--name" src={name} alt="100ways name in logo"></img>
+              <img
+                className="logo--name"
+                src={name}
+                alt="100ways name in logo"
+              ></img>
             </Link>
             <div className="nav__links">
               <div className="nav__buttons--group">
@@ -79,12 +120,41 @@ function Header() {
           <Route
             path="/home"
             element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense
+                fallback={
+                  <div className="center-spinner">
+                    <SpinnerRoundFilled
+                      size={50}
+                      thickness={100}
+                      speed={100}
+                      color="#bf85fe"
+                    />
+                  </div>
+                }
+              >
                 <Home />
               </Suspense>
             }
           />
-          <Route path="/hotels" element={<Navigate to="/home" />} />
+          <Route
+            path="/hotels"
+            element={
+              <Suspense
+                fallback={
+                  <div className="center-spinner">
+                    <SpinnerRoundFilled
+                      size={50}
+                      thickness={100}
+                      speed={100}
+                      color="#bf85fe"
+                    />
+                  </div>
+                }
+              >
+                <Hotels />
+              </Suspense>
+            }
+          />
           <Route path="/meals" element={<Navigate to="/home" />} />
           <Route path="/transportation" element={<Navigate to="/home" />} />
           <Route path="/landmarks" element={<Navigate to="/home" />} />
