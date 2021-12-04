@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect } from "react";
 import logo from "../images/logo.png";
 import name from "../images/name.png";
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, NavLink } from "react-router-dom";
 import { debounce } from "../utilities/helper";
 import { SpinnerRoundFilled } from "spinners-react";
 const Home = React.lazy(() => import("./Home"));
@@ -29,84 +29,84 @@ function Header() {
         <div className="container">
           <div className={small ? "header--small show" : "header--small"}>
             <div className="nav__links--small">
-			<Link to="/home" className="nav__link--small">
+			<NavLink to="/home" className="nav__link--small">
                 <div className="nav__button--small">Домой</div>
-              </Link>
-              <Link to="/hotels" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/hotels" className="nav__link--small">
                 <div className="nav__button--small">Отели</div>
-              </Link>
-              <Link to="/meals" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/meals" className="nav__link--small">
                 <div className="nav__button--small">Питание</div>
-              </Link>
-              <Link to="/transportation" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/transportation" className="nav__link--small">
                 <div className="nav__button--small">Транспорт</div>
-              </Link>
-              <Link to="/landmarks" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/landmarks" className="nav__link--small">
                 <div className="nav__button--small">Что посмотреть</div>
-              </Link>
-              <Link to="/tour" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/tour" className="nav__link--small">
                 <div className="nav__button--small">Тур</div>
-              </Link>
-              <Link to="/ticket" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/ticket" className="nav__link--small">
                 <div className="nav__button--small">Путевка</div>
-              </Link>
-              <Link to="/checking" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/checking" className="nav__link--small">
                 <div className="nav__button--small">Заселение</div>
-              </Link>
-              <Link to="/technologies" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/technologies" className="nav__link--small">
                 <div className="nav__button--small">Технологии</div>
-              </Link>
-              <Link to="/about" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/about" className="nav__link--small">
                 <div className="nav__button--small">О Фирме</div>
-              </Link>
-              <Link to="/reviews" className="nav__link--small">
+              </NavLink>
+              <NavLink to="/reviews" className="nav__link--small">
                 <div className="nav__button--small">Отзывы</div>
-              </Link>
+              </NavLink>
             </div>
           </div>
           <div className={small ? "header" : "header show"}>
-            <Link to="/home" className="nav__link">
+            <NavLink to="/home" className="nav__link">
               <img className="logo" src={logo} alt="100ways logo"></img>
               <img
                 className="logo--name"
                 src={name}
                 alt="100ways name in logo"
               ></img>
-            </Link>
+            </NavLink>
             <div className="nav__links">
               <div className="nav__buttons--group">
-                <Link to="/hotels" className="nav__link">
+                <NavLink to="/hotels" className="nav__link">
                   <div className="nav__button">Отели</div>
-                </Link>
-                <Link to="/meals" className="nav__link">
+                </NavLink>
+                <NavLink to="/meals" className="nav__link">
                   <div className="nav__button">Питание</div>
-                </Link>
-                <Link to="/transportation" className="nav__link">
+                </NavLink>
+                <NavLink to="/transportation" className="nav__link">
                   <div className="nav__button">Транспорт</div>
-                </Link>
-                <Link to="/landmarks" className="nav__link">
+                </NavLink>
+                <NavLink to="/landmarks" className="nav__link">
                   <div className="nav__button">Что посмотреть</div>
-                </Link>
-                <Link to="/tour" className="nav__link">
+                </NavLink>
+                <NavLink to="/tour" className="nav__link">
                   <div className="nav__button">Тур</div>
-                </Link>
+                </NavLink>
               </div>
               <div className="nav__buttons--group">
-                <Link to="/ticket" className="nav__link">
+                <NavLink to="/ticket" className="nav__link">
                   <div className="nav__button">Путевка</div>
-                </Link>
-                <Link to="/checking" className="nav__link">
+                </NavLink>
+                <NavLink to="/checking" className="nav__link">
                   <div className="nav__button">Заселение</div>
-                </Link>
-                <Link to="/technologies" className="nav__link">
+                </NavLink>
+                <NavLink to="/technologies" className="nav__link">
                   <div className="nav__button">Технологии</div>
-                </Link>
-                <Link to="/about" className="nav__link">
+                </NavLink>
+                <NavLink to="/about" className="nav__link">
                   <div className="nav__button">О Фирме</div>
-                </Link>
-                <Link to="/reviews" className="nav__link">
+                </NavLink>
+                <NavLink to="/reviews" className="nav__link">
                   <div className="nav__button">Отзывы</div>
-                </Link>
+                </NavLink>
               </div>
             </div>
           </div>

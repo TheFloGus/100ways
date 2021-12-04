@@ -16,36 +16,12 @@ function Home() {
   let history = useNavigate();
   AOS.init()
 
-  const carouselRef = React.useRef(null);
-  const onNextStart = (currentItem, nextItem) => {
-    if (currentItem.index === nextItem.index) {
-      carouselRef.current.goTo(0);
-    }
-  };
-  const onPrevStart = (currentItem, nextItem) => {
-    if (currentItem.index === nextItem.index) {
-      carouselRef.current.goTo(4);
-    }
-  };
-
-  const Loop = (currentItem) => {
-    if (currentItem.index === 3) {
-      setTimeout(() => {
-        carouselRef.current.goTo(0);
-      }, 3000);
-    }
-  };
-
   return (
     <div className="home__wrap">
       <div className="container">
         <div className="home">
           <div className="carousel">
             <Carousel
-              onChange={Loop}
-              ref={carouselRef}
-              onPrevStart={onPrevStart}
-              onNextStart={onNextStart}
               itemsToShow={1}
               disableArrowsOnEnd={false}
               enableAutoPlay
@@ -129,6 +105,7 @@ function Home() {
                 width="550"
                 height="390"
 				title="Map of Cagliari"
+				loading="lazy"
               ></iframe>
             </div>
             <div className="geo-text">

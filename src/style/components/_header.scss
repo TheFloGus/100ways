@@ -110,3 +110,13 @@
 .nav__buttons--group {
   display: flex;
 }
+
+.active .nav__button--small{
+	background-color: #fff;
+	color: #bf85fe;
+}
+
+.active .nav__button{
+	background-color: #fff;
+	color: #bf85fe;
+}
