@@ -3,8 +3,11 @@ import linkIcon from "../images/link-icon.png";
 import doglio from "../images/PalazzoDoglio/Doglio-front.webp";
 import domus from "../images/Domus/Domus.webp";
 import mimi from "../images/Mimi/Mimi.jpg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Hotels() {
+	AOS.init()
   return (
     <div className="hotels__wrap">
       <div className="container">
@@ -45,7 +48,7 @@ function Hotels() {
               Гостиницы которые мы выбрали для Вас:
             </h2>
             <div className="hotels--cards">
-              <div className="hotel--card">
+              <div className="hotel--card" data-aos="fade-right">
                 <div className="hotel--photo">
                   <img src={doglio} height="300px"></img>
                 </div>
@@ -78,7 +81,7 @@ function Hotels() {
                 </div>
               </div>
 
-              <div className="hotel--card">
+              <div className="hotel--card" data-aos="fade-right">
                 <div className="hotel--photo">
                   <img
                     src={domus}
@@ -115,7 +118,7 @@ function Hotels() {
                 </div>
               </div>
 
-              <div className="hotel--card">
+              <div className="hotel--card" data-aos="fade-right">
                 <div className="hotel--photo">
                   <img
                     src={mimi}
