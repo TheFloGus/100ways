@@ -9,12 +9,11 @@ import crest from "../images/crest.png";
 import polina from "../images/polina-avatar.jpg"
 import liza from "../images/liza-avatar.jpg"
 import eugene from "../images/eugene-avatar.jpg"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 
 function Home() {
   let history = useNavigate();
-  AOS.init()
+  
 
   return (
     <div className="home__wrap">

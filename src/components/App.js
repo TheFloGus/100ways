@@ -1,9 +1,13 @@
 import React, { Suspense } from "react";
 import "../style/main.scss";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { SpinnerRoundFilled } from "spinners-react";
 const Header = React.lazy(() => import("./Header"));
 
+
 function App() {
+	AOS.init()
   return (
     <div className="wrap">
       <Suspense

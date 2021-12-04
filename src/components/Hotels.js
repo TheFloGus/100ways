@@ -3,11 +3,8 @@ import linkIcon from "../images/link-icon.png";
 import doglio from "../images/PalazzoDoglio/Doglio-front.webp";
 import domus from "../images/Domus/Domus.webp";
 import mimi from "../images/Mimi/Mimi.jpg";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 function Hotels() {
-	AOS.init()
   return (
     <div className="hotels__wrap">
       <div className="container">
@@ -50,7 +47,7 @@ function Hotels() {
             <div className="hotels--cards">
               <div className="hotel--card" data-aos="fade-right">
                 <div className="hotel--photo">
-                  <img src={doglio} height="300px"></img>
+                  <img src={doglio} height="300px" alt="doglio"></img>
                 </div>
                 <div className="hotel--text">
                   <h2 className="hotel--title">Hotel Palazzo Doglio</h2>
@@ -69,6 +66,7 @@ function Hotels() {
                   <a
                     href="https://www.booking.com/hotel/it/palazzo-doglio.ru.html?aid=397594&label=gog235jc-1FCAEoggI46AdIM1gDaCWIAQGYAQm4ARfIAQzYAQHoAQH4AQyIAgGoAgO4ApvHrY0GwAIB0gIkMzg0ZDc3NGEtODc1My00OWNlLThhY2ItZDY2NmU1ZjFiOTM12AIG4AIB&sid=186d3d2417183bcf51deab37c46e9126&dest_id=4392057&dest_type=hotel&group_adults=2&group_children=0&hapos=0&hpos=0&lang=ru&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soz=1&sr_order=popularity&srepoch=1638622172&srpvid=27c05a2d04ec009c&type=total&ucfs=1&lang_click=other;cdl=en-gb;lang_changed=1"
                     target="_blank"
+					rel="noreferrer"
                     style={{ textDecoration: "none", color: "#000" }}
                   >
                     <img
@@ -106,6 +104,7 @@ function Hotels() {
                   <a
                     href="https://www.booking.com/hotel/it/domus-de-silva.ru.html?aid=397594;label=gog235jc-1FCAEoggI46AdIM1gDaCWIAQGYAQm4ARfIAQzYAQHoAQH4AQyIAgGoAgO4ApvHrY0GwAIB0gIkMzg0ZDc3NGEtODc1My00OWNlLThhY2ItZDY2NmU1ZjFiOTM12AIG4AIB;sid=186d3d2417183bcf51deab37c46e9126;dest_id=3342961;dest_type=hotel;dist=0;group_adults=2;group_children=0;hapos=0;hpos=0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1638622930;srpvid=c1435ba84c5f005a;type=total;ucfs=1&#hotelTmpl"
                     target="_blank"
+					rel="noreferrer"
                     style={{ textDecoration: "none", color: "#000" }}
                   >
                     <img
@@ -124,7 +123,7 @@ function Hotels() {
                     src={mimi}
                     height="300px"
                     width="300px"
-                    alt="Domus De Silvia"
+                    alt="Mimi"
                     style={{ objectFit: "cover" }}
                   ></img>
                 </div>
@@ -147,6 +146,7 @@ function Hotels() {
                   <a
                     href="https://www.booking.com/hotel/it/suite-mimi-casa-vacanza-cagliari.ru.html?aid=397594;label=gog235jc-1FCAEoggI46AdIM1gDaCWIAQGYAQm4ARfIAQzYAQHoAQH4AQyIAgGoAgO4ApvHrY0GwAIB0gIkMzg0ZDc3NGEtODc1My00OWNlLThhY2ItZDY2NmU1ZjFiOTM12AIG4AIB;sid=186d3d2417183bcf51deab37c46e9126;dest_id=5443771;dest_type=hotel;dist=0;group_adults=2;group_children=0;hapos=0;hpos=0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1638623215;srpvid=9a645c37ee8a00c0;type=total;ucfs=1&#hotelTmpl"
                     target="_blank"
+					rel="noreferrer"
                     style={{ textDecoration: "none", color: "#000" }}
                   >
                     <img

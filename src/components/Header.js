@@ -6,15 +6,14 @@ import { debounce } from "../utilities/helper";
 import { SpinnerRoundFilled } from "spinners-react";
 const Home = React.lazy(() => import("./Home"));
 const Hotels = React.lazy(() => import("./Hotels"));
+const Meals = React.lazy(() => import("./Meals"));
 
 function Header() {
   const [small, setSmall] = useState(false);
 
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
-    setSmall(
-      currentScrollPos > 10
-    );
+    setSmall(currentScrollPos > 10);
   }, 100);
 
   useEffect(() => {
@@ -29,7 +28,7 @@ function Header() {
         <div className="container">
           <div className={small ? "header--small show" : "header--small"}>
             <div className="nav__links--small">
-			<NavLink to="/home" className="nav__link--small">
+              <NavLink to="/home" className="nav__link--small">
                 <div className="nav__button--small">Домой</div>
               </NavLink>
               <NavLink to="/hotels" className="nav__link--small">
@@ -153,7 +152,26 @@ function Header() {
               </Suspense>
             }
           />
-          <Route path="/meals" element={<Navigate to="/home" />} />
+          <Route
+            path="/meals"
+            element={
+              
+				<Suspense
+                fallback={
+                  <div className="center-spinner">
+                    <SpinnerRoundFilled
+                      size={50}
+                      thickness={100}
+                      speed={100}
+                      color="#bf85fe"
+                    />
+                  </div>
+                }
+              >
+                <Meals />
+              </Suspense>
+            }
+          />
           <Route path="/transportation" element={<Navigate to="/home" />} />
           <Route path="/landmarks" element={<Navigate to="/home" />} />
           <Route path="/tour" element={<Navigate to="/home" />} />
