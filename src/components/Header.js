@@ -8,6 +8,7 @@ const Home = React.lazy(() => import("./Home"));
 const Hotels = React.lazy(() => import("./Hotels"));
 const Meals = React.lazy(() => import("./Meals"));
 const Transport = React.lazy(() => import("./Transport"));
+const Landmarks = React.lazy(() => import("./Landmarks"));
 
 function Header() {
   const [small, setSmall] = useState(false);
@@ -156,8 +157,7 @@ function Header() {
           <Route
             path="/meals"
             element={
-              
-				<Suspense
+              <Suspense
                 fallback={
                   <div className="center-spinner">
                     <SpinnerRoundFilled
@@ -173,24 +173,44 @@ function Header() {
               </Suspense>
             }
           />
-          <Route path="/transportation" element={
-              
-			  <Suspense
-			  fallback={
-				<div className="center-spinner">
-				  <SpinnerRoundFilled
-					size={50}
-					thickness={100}
-					speed={100}
-					color="#bf85fe"
-				  />
-				</div>
-			  }
-			>
-			  <Transport />
-			</Suspense>
-		  } />
-          <Route path="/landmarks" element={<Navigate to="/home" />} />
+          <Route
+            path="/transportation"
+            element={
+              <Suspense
+                fallback={
+                  <div className="center-spinner">
+                    <SpinnerRoundFilled
+                      size={50}
+                      thickness={100}
+                      speed={100}
+                      color="#bf85fe"
+                    />
+                  </div>
+                }
+              >
+                <Transport />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/landmarks"
+            element={
+              <Suspense
+                fallback={
+                  <div className="center-spinner">
+                    <SpinnerRoundFilled
+                      size={50}
+                      thickness={100}
+                      speed={100}
+                      color="#bf85fe"
+                    />
+                  </div>
+                }
+              >
+                <Landmarks />
+              </Suspense>
+            }
+          />
           <Route path="/tour" element={<Navigate to="/home" />} />
           <Route path="/ticket" element={<Navigate to="/home" />} />
           <Route path="/checking" element={<Navigate to="/home" />} />
