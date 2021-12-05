@@ -12,6 +12,7 @@ const Transport = React.lazy(() => import("./Transport"));
 const Landmarks = React.lazy(() => import("./Landmarks"));
 const Tour = React.lazy(() => import("./Tour"));
 const Ticket = React.lazy(() => import("./Ticket"));
+const Reviews = React.lazy(() => import("./Reviews"));
 
 function Header() {
   const [small, setSmall] = useState(false);
@@ -256,7 +257,20 @@ function Header() {
             <Route path="/checking" element={<Navigate to="/home" />} />
             <Route path="/technologies" element={<Navigate to="/home" />} />
             <Route path="/about" element={<Navigate to="/home" />} />
-            <Route path="/reviews" element={<Navigate to="/home" />} />
+            <Route path="/reviews" element={<Suspense
+                  fallback={
+                    <div className="center-spinner">
+                      <SpinnerRoundFilled
+                        size={50}
+                        thickness={100}
+                        speed={100}
+                        color="#bf85fe"
+                      />
+                    </div>
+                  }
+                >
+                  <Reviews />
+                </Suspense>} />
           </Routes>
         </ScrollToTop>
       </div>
