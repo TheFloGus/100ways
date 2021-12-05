@@ -4,6 +4,7 @@ import name from "../images/name.png";
 import { Routes, Route, Navigate, NavLink } from "react-router-dom";
 import { debounce } from "../utilities/helper";
 import { SpinnerRoundFilled } from "spinners-react";
+import ScrollToTop from "../utilities/ScrollToTop"
 const Home = React.lazy(() => import("./Home"));
 const Hotels = React.lazy(() => import("./Hotels"));
 const Meals = React.lazy(() => import("./Meals"));
@@ -115,6 +116,7 @@ function Header() {
         </div>
       </div>
       <div className="main__pages">
+		  <ScrollToTop>
         <Routes>
           <Route exact path="/" element={<Navigate to="/home" />} />
           <Route
@@ -237,6 +239,7 @@ function Header() {
           <Route path="/about" element={<Navigate to="/home" />} />
           <Route path="/reviews" element={<Navigate to="/home" />} />
         </Routes>
+		</ScrollToTop>
       </div>
       <div className="footer__wrap">
         <div className="container">
