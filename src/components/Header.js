@@ -7,6 +7,7 @@ import { SpinnerRoundFilled } from "spinners-react";
 const Home = React.lazy(() => import("./Home"));
 const Hotels = React.lazy(() => import("./Hotels"));
 const Meals = React.lazy(() => import("./Meals"));
+const Transport = React.lazy(() => import("./Transport"));
 
 function Header() {
   const [small, setSmall] = useState(false);
@@ -172,7 +173,23 @@ function Header() {
               </Suspense>
             }
           />
-          <Route path="/transportation" element={<Navigate to="/home" />} />
+          <Route path="/transportation" element={
+              
+			  <Suspense
+			  fallback={
+				<div className="center-spinner">
+				  <SpinnerRoundFilled
+					size={50}
+					thickness={100}
+					speed={100}
+					color="#bf85fe"
+				  />
+				</div>
+			  }
+			>
+			  <Transport />
+			</Suspense>
+		  } />
           <Route path="/landmarks" element={<Navigate to="/home" />} />
           <Route path="/tour" element={<Navigate to="/home" />} />
           <Route path="/ticket" element={<Navigate to="/home" />} />
