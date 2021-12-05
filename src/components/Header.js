@@ -4,13 +4,14 @@ import name from "../images/name.png";
 import { Routes, Route, Navigate, NavLink } from "react-router-dom";
 import { debounce } from "../utilities/helper";
 import { SpinnerRoundFilled } from "spinners-react";
-import ScrollToTop from "../utilities/ScrollToTop"
+import ScrollToTop from "../utilities/ScrollToTop";
 const Home = React.lazy(() => import("./Home"));
 const Hotels = React.lazy(() => import("./Hotels"));
 const Meals = React.lazy(() => import("./Meals"));
 const Transport = React.lazy(() => import("./Transport"));
 const Landmarks = React.lazy(() => import("./Landmarks"));
 const Tour = React.lazy(() => import("./Tour"));
+const Ticket = React.lazy(() => import("./Ticket"));
 
 function Header() {
   const [small, setSmall] = useState(false);
@@ -116,130 +117,148 @@ function Header() {
         </div>
       </div>
       <div className="main__pages">
-		  <ScrollToTop>
-        <Routes>
-          <Route exact path="/" element={<Navigate to="/home" />} />
-          <Route
-            path="/home"
-            element={
-              <Suspense
-                fallback={
-                  <div className="center-spinner">
-                    <SpinnerRoundFilled
-                      size={50}
-                      thickness={100}
-                      speed={100}
-                      color="#bf85fe"
-                    />
-                  </div>
-                }
-              >
-                <Home />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/hotels"
-            element={
-              <Suspense
-                fallback={
-                  <div className="center-spinner">
-                    <SpinnerRoundFilled
-                      size={50}
-                      thickness={100}
-                      speed={100}
-                      color="#bf85fe"
-                    />
-                  </div>
-                }
-              >
-                <Hotels />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/meals"
-            element={
-              <Suspense
-                fallback={
-                  <div className="center-spinner">
-                    <SpinnerRoundFilled
-                      size={50}
-                      thickness={100}
-                      speed={100}
-                      color="#bf85fe"
-                    />
-                  </div>
-                }
-              >
-                <Meals />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/transportation"
-            element={
-              <Suspense
-                fallback={
-                  <div className="center-spinner">
-                    <SpinnerRoundFilled
-                      size={50}
-                      thickness={100}
-                      speed={100}
-                      color="#bf85fe"
-                    />
-                  </div>
-                }
-              >
-                <Transport />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/landmarks"
-            element={
-              <Suspense
-                fallback={
-                  <div className="center-spinner">
-                    <SpinnerRoundFilled
-                      size={50}
-                      thickness={100}
-                      speed={100}
-                      color="#bf85fe"
-                    />
-                  </div>
-                }
-              >
-                <Landmarks />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/tour"
-            element={
-              <Suspense
-                fallback={
-                  <div className="center-spinner">
-                    <SpinnerRoundFilled
-                      size={50}
-                      thickness={100}
-                      speed={100}
-                      color="#bf85fe"
-                    />
-                  </div>
-                }
-              >
-                <Tour />
-              </Suspense>
-            }
-          />
-          <Route path="/ticket" element={<Navigate to="/home" />} />
-          <Route path="/checking" element={<Navigate to="/home" />} />
-          <Route path="/technologies" element={<Navigate to="/home" />} />
-          <Route path="/about" element={<Navigate to="/home" />} />
-          <Route path="/reviews" element={<Navigate to="/home" />} />
-        </Routes>
-		</ScrollToTop>
+        <ScrollToTop>
+          <Routes>
+            <Route exact path="/" element={<Navigate to="/home" />} />
+            <Route
+              path="/home"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="center-spinner">
+                      <SpinnerRoundFilled
+                        size={50}
+                        thickness={100}
+                        speed={100}
+                        color="#bf85fe"
+                      />
+                    </div>
+                  }
+                >
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/hotels"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="center-spinner">
+                      <SpinnerRoundFilled
+                        size={50}
+                        thickness={100}
+                        speed={100}
+                        color="#bf85fe"
+                      />
+                    </div>
+                  }
+                >
+                  <Hotels />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/meals"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="center-spinner">
+                      <SpinnerRoundFilled
+                        size={50}
+                        thickness={100}
+                        speed={100}
+                        color="#bf85fe"
+                      />
+                    </div>
+                  }
+                >
+                  <Meals />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/transportation"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="center-spinner">
+                      <SpinnerRoundFilled
+                        size={50}
+                        thickness={100}
+                        speed={100}
+                        color="#bf85fe"
+                      />
+                    </div>
+                  }
+                >
+                  <Transport />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/landmarks"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="center-spinner">
+                      <SpinnerRoundFilled
+                        size={50}
+                        thickness={100}
+                        speed={100}
+                        color="#bf85fe"
+                      />
+                    </div>
+                  }
+                >
+                  <Landmarks />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/tour"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="center-spinner">
+                      <SpinnerRoundFilled
+                        size={50}
+                        thickness={100}
+                        speed={100}
+                        color="#bf85fe"
+                      />
+                    </div>
+                  }
+                >
+                  <Tour />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/ticket"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="center-spinner">
+                      <SpinnerRoundFilled
+                        size={50}
+                        thickness={100}
+                        speed={100}
+                        color="#bf85fe"
+                      />
+                    </div>
+                  }
+                >
+                  <Ticket />
+                </Suspense>
+              }
+            />
+            <Route path="/checking" element={<Navigate to="/home" />} />
+            <Route path="/technologies" element={<Navigate to="/home" />} />
+            <Route path="/about" element={<Navigate to="/home" />} />
+            <Route path="/reviews" element={<Navigate to="/home" />} />
+          </Routes>
+        </ScrollToTop>
       </div>
       <div className="footer__wrap">
         <div className="container">
