@@ -1,0 +1,41 @@
+.tour__blocks{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: 17px;
+	text-align: justify; 
+}
+
+.tour__block{
+	margin-bottom: 30px;
+}
+
+.tour__block--title{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	background-color: #7CA2FF;
+	color: #fff;
+	border-radius: 7px;
+	padding: 15px;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.tour__block--content{
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+.tour__block--description{
+	width: 50%;
+}
+
+.tour__block--line{
+	width: 100%;
+	height: 5px;
+	background-color: #7CA2FF;
+	border-radius: 3px;
+}

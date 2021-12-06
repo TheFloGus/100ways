@@ -1,0 +1,14 @@
+@import "components/wrap", "components/header", "components/footer",
+  "components/home", "components/hotels", "components/meals",
+  "components/transport", "components/landmarks", "components/tour",
+  "components/reviews", "components/about", "components/tech";
+
+html {
+  zoom: 1;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+}
