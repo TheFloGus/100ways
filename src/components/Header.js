@@ -15,6 +15,7 @@ const Ticket = React.lazy(() => import("./Ticket"));
 const Reviews = React.lazy(() => import("./Reviews"));
 const About = React.lazy(() => import("./About"));
 const Checking = React.lazy(() => import("./Checking"));
+const Tech = React.lazy(() => import("./Tech"));
 
 function Header() {
   const [small, setSmall] = useState(false);
@@ -143,7 +144,7 @@ function Header() {
               <Route path="/tour" element={<Tour />} />
               <Route path="/ticket" element={<Ticket />} />
               <Route path="/checking" element={<Checking />} />
-              <Route path="/technologies" element={<Navigate to="/home" />} />
+              <Route path="/technologies" element={<Tech />} />
               <Route path="/about" element={<About />} />
               <Route path="/reviews" element={<Reviews />} />
             </Routes>
