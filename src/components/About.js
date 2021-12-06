@@ -256,8 +256,9 @@ function About() {
                   height="350"
                   allowFullScreen=""
                   loading="lazy"
+                  title="map of the office"
                 ></iframe>
-                <img src={ourOffice} width="500px"></img>
+                <img src={ourOffice} width="500px" alt="office"></img>
               </div>
             </div>
           </div>
