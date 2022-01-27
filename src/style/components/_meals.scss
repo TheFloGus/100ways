@@ -1,0 +1,73 @@
+.meals{
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.meals__info{
+	display: flex;
+	justify-content: space-between;
+}
+
+.meals__info--text{
+	text-align: justify;
+	width: 50%;
+	margin-right: 20px;
+}
+
+.meals__info--title{
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+.meals__info--description{
+	font-size: 20px;
+}
+
+.meals__cards--title{
+	margin-top: 50px;
+	font-size: 40px;
+}
+
+.meals__card{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	height: 300px;
+	overflow: hidden;
+	border: 2px solid #bf85fe;
+	border-radius: 10px;
+	margin-top: 50px;
+}
+
+.meals__text{
+	padding: 20px;
+	margin-left: 20px;
+	text-align: justify;
+}
+
+.meals__title{
+	font-size: 30px;
+}
+
+.meals__stars{
+	margin-top: 5px;
+}
+
+.meals__description{
+	margin-top: 15px;
+	font-size: 20px;
+}
+
+.meals__link{
+	width: 100px;
+	height: 100px;
+	margin-left: 50px;
+	margin-right: 25px;
+	transition: all 0.2s linear;
+	filter: invert(44%) sepia(59%) saturate(1153%) hue-rotate(224deg) brightness(121%) contrast(104%)
+}
+
+.meals__link:hover{
+transform: scale(1.2);
+}

@@ -1,0 +1,128 @@
+.home{
+	margin: 100px 0 100px 0;
+}
+
+.slide{
+	display: flex;
+	width: 1200px;
+	height: 300px;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	border-radius: 15px;
+	cursor: pointer;
+	font-size: 26px;
+}
+
+.slide.hotel{
+	background: no-repeat url(../../images/hotels-slide.jpg) center;
+	background-size: cover;
+}
+
+.slide.attractions{
+	background: no-repeat url(../../images/attractions.jpg) center;
+	background-size: cover;
+}
+
+.slide.cafe{
+	background: no-repeat url(../../images/cafe.jpg) center;
+	background-size: cover;
+}
+
+.slide.reviews{
+	background: no-repeat url(../../images/reviews.jpg) center;
+	background-size: cover;
+}
+
+.slide--glass{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	width: 50%;
+	height: 70%;
+	border-radius: 10px;
+	backdrop-filter: blur(5px);
+	box-shadow: 5px 4px 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-info{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+
+.main-text{
+	width: 80%;
+	font-size: 16px;
+	font-weight: 200;
+	margin-right: 100px; 
+	text-align: justify;
+}
+
+.main-text--header{
+	margin-bottom: 15px;
+}
+
+.main-image{
+	margin: 5px;
+}
+
+.geo-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+.geo-text{
+	margin-left: 40px;
+	font-weight: 200;
+}
+
+.geo-text--title{
+	margin-bottom: 15px;
+}
+
+.students{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.student__blocks{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 50px;
+}
+
+.student__block{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 300px;
+	border: 3px solid #bf85fe;
+	border-radius: 7px;
+	padding: 20px;
+	margin: 0 15px;
+}
+
+.student__block:hover{
+	background-color: #bf85fe;
+	color: #fff;
+}
+
+.student__avatar{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.student__name{
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0 20px 0;
+}
